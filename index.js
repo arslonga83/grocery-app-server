@@ -11,4 +11,7 @@ app.listen(port, () => {
   console.log(`list server is running on port ${port}.`)
 });
 
-app.get('/', api.placeholder);
+app.get('/', api.getList);
+app.post('/', api.addItem);
+app.put('/:id', api.editItem);
+app.delete('/:id', api.deleteItem);
