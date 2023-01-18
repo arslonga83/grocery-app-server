@@ -1,18 +1,17 @@
 const { response } = require('express');
 
 require('dotenv').config()
-// console.log(process.env)
+console.log(process.env)
 console.log(process.env.dbPassword)
 console.log(process.env.dbHost)
-console.log(process.env.dbUser)
-console.log(process.env.PORT)
+// console.log(process.env.PORT)
 
 const Pool = require('pg').Pool;
 
 const pool = new Pool({
-  user: process.env.dbUser,
+  user: "scrcwcmr",
   host: process.env.dbHost,
-  database: process.env.dbUser,
+  database: "scrcwcmr",
   password: process.env.dbPassword,
   port: process.env.PORT
 });
