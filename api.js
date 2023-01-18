@@ -21,7 +21,12 @@ const pool = new Pool({
 const getList = async (req, res) => {
   pool.query('SELECT * from list ORDER BY category ASC', 
   (error, results) => {
-    res.status(200).json(results.rows);
+    if (error) { 
+      console.log('error connecting to database')
+    } else{
+      res.status(200).json(results.rows);
+    }
+    
   });
 };
 
