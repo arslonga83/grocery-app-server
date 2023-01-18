@@ -11,7 +11,7 @@ const pool = new Pool({
 });
 
 const getList = async (req, res) => {
-  pool.query('SELECT * from list', 
+  pool.query('SELECT * from list ORDER BY category ASC', 
   (error, results) => {
     res.status(200).json(results.rows);
   });
