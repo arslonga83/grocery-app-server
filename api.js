@@ -1,18 +1,20 @@
 const { response } = require('express');
 
-require('dotenv').config()
-console.log(process.env)
-console.log(process.env.dbPassword)
-console.log(process.env.dbHost)
+// require('dotenv').config()
+// console.log(process.env)
+// console.log(process.env.dbPassword)
+// console.log(process.env.dbHost)
 // console.log(process.env.PORT)
 
 const Pool = require('pg').Pool;
 
 const pool = new Pool({
   user: "scrcwcmr",
-  host: process.env.dbHost,
+  // host: process.env.dbHost,
+  host: "heffalump.db.elephantsql.com",
   database: "scrcwcmr",
-  password: process.env.dbPassword,
+  // password: process.env.dbPassword,
+  password: "GwKX7zCBh09Fd4KaghPT0vb8o6JZR9XU",
   port: process.env.PORT
 });
 
