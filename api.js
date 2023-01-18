@@ -1,6 +1,6 @@
 const { response } = require('express');
-require('dotenv').config()
-console.log(process.env)
+// require('dotenv').config()
+// console.log(process.env)
 console.log(process.env.dbPassword)
 console.log(process.env.dbHost)
 const Pool = require('pg').Pool;
