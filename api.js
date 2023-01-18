@@ -3,6 +3,9 @@ const { response } = require('express');
 // console.log(process.env)
 console.log(process.env.dbPassword)
 console.log(process.env.dbHost)
+console.log(process.env.dbUser)
+console.log(process.env.PORT)
+
 const Pool = require('pg').Pool;
 
 const pool = new Pool({
