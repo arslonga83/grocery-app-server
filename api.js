@@ -1,13 +1,16 @@
 const { response } = require('express');
-
+require('dotenv').config()
+console.log(process.env)
+console.log(process.env.dbPassword)
+console.log(process.env.dbHost)
 const Pool = require('pg').Pool;
 
 const pool = new Pool({
-  user: 'arslonga83',
-  host: 'localhost',
-  database: 'shoppinglist',
-  password: 'password',
-  port: 5432
+  user: process.env.dbUser,
+  host: process.env.dbHost,
+  database: process.env.dbUser,
+  password: process.env.dbPassword,
+  port: process.env.PORT
 });
 
 const getList = async (req, res) => {
