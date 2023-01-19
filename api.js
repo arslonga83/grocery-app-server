@@ -6,7 +6,7 @@ const Pool = require('pg').Pool;
 
 const pool = new Pool({
   user: "scrcwcmr",
-  host: "heffalump.db.elephantsql.com",
+  host: "postgres://scrcwcmr:GwKX7zCBh09Fd4KaghPT0vb8o6JZR9XU@heffalump.db.elephantsql.com/scrcwcmr",
   database: "scrcwcmr",
   password: "GwKX7zCBh09Fd4KaghPT0vb8o6JZR9XU",
   port: process.env.PORT
