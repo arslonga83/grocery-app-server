@@ -6,10 +6,10 @@ const Pool = require('pg').Pool;
 
 const pool = new Pool({
   user: "scrcwcmr",
-  host: "postgres://scrcwcmr:GwKX7zCBh09Fd4KaghPT0vb8o6JZR9XU@heffalump.db.elephantsql.com/scrcwcmr",
+  host: "heffalump.db.elephantsql.com",
   database: "scrcwcmr",
   password: "GwKX7zCBh09Fd4KaghPT0vb8o6JZR9XU",
-  port: process.env.PORT
+  port: 5432
 });
 
 const getList = async (req, res) => {
